@@ -1,13 +1,12 @@
 $(document).ready(function () {
     
-
+  // random Number
     let numberMatch;
 
+  // crystal random numer
     let firstCrystal;
     let secondtCrystal;
-
     let thirdCrystal;
-    
     let fourthCrystal;
 
 
@@ -15,7 +14,6 @@ $(document).ready(function () {
     let loses = 0
 
     let calculateScore = 0
-    // $(".calculate-score").html(calculateScore);
 
     resetGame()
     reset()
@@ -41,11 +39,9 @@ $(document).ready(function () {
         if (calculateScore == numberMatch) {
             win()
             reset()
-            resetGame()
         } else if (calculateScore > numberMatch) {
             lose()
             reset();
-            resetGame();
         }
 
     }
@@ -56,11 +52,9 @@ $(document).ready(function () {
        if (calculateScore == numberMatch) {
          win();
          reset();
-         resetGame();
        } else if (calculateScore > numberMatch) {
          lose();
          reset();
-         resetGame();
        }
     }
 
@@ -70,11 +64,9 @@ $(document).ready(function () {
        if (calculateScore == numberMatch) {
          win();
          reset();
-         resetGame();
        } else if (calculateScore > numberMatch) {
          lose();
          reset();
-         resetGame();
        }
     }
 
@@ -84,11 +76,9 @@ $(document).ready(function () {
         if (calculateScore == numberMatch) {
           win();
           reset();
-          resetGame();
         } else if (calculateScore > numberMatch) {
           lose();
           reset();
-          resetGame();
         }
     }
 
@@ -99,21 +89,16 @@ $(document).ready(function () {
     }
 
     function resetGame() {
-        numberMatch = Math.floor(Math.random() * (150 - 40 + 1) + 40);
+        numberMatch = Math.floor(Math.random() * (121 - 19 + 1) + 19);
         $(".numberMatch").html(numberMatch);
-        console.log(numberMatch);
 
-        firstCrystal = Math.floor(Math.random() * (15 + 1) + 1);
-        console.log(firstCrystal);
+        firstCrystal = Math.floor(Math.random() * 14 + 1);
 
-        secondtCrystal = Math.floor(Math.random() * (15 + 1) + 1);
-        console.log(secondtCrystal);
+        secondtCrystal = Math.floor(Math.random() * 14 + 1);
 
-        thirdCrystal = Math.floor(Math.random() * (15 + 1) + 1);
-        console.log(thirdCrystal);
+        thirdCrystal = Math.floor(Math.random() * 14 + 1);
 
-        fourthCrystal = Math.floor(Math.random() * (15 + 1) + 1);
-        console.log(fourthCrystal);
+        fourthCrystal = Math.floor(Math.random() * 14 + 1);
     }
 
     $(document).on("click", ".lightBlue", lightBlue)
